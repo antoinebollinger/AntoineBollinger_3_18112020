@@ -38,12 +38,12 @@ header a, header h1 {
 	margin: 0;
 }
 
-/* MAIN */
+/* MAIN PAGE ACCUEIL */
 
 main {
 	box-sizing: border-box;
 	min-height: 100vh;
-	padding: 80px 0 0 0 ;
+	margin: 80px 0 0 0 ;
 }
 
 /* Localisation */
@@ -117,29 +117,30 @@ main section:nth-child(3) > div > div:nth-child(2) {
 
 /*  backgrounds */
 
-main section:nth-child(4) > div:nth-child(2) > div:nth-child(1) {
+main section:nth-child(4) > a:nth-child(2) > div:nth-child(1) {
 	background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
 }
 
-main section:nth-child(4) > div:nth-child(3) > div:nth-child(1) {
+main section:nth-child(4) > a:nth-child(3) > div:nth-child(1) {
 	background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
 }
 
-main section:nth-child(4) > div:nth-child(4) > div:nth-child(1) {
+main section:nth-child(4) > a:nth-child(4) > div:nth-child(1) {
 	background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 }
 
-main section:nth-child(4) > div:nth-child(5) > div:nth-child(1) {
+main section:nth-child(4) > a:nth-child(5) > div:nth-child(1) {
 	background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 }
 
 /* elements */ 
+
 main section:nth-child(4) {
 	background-color: var(--gris-clair);
 	align-items: unset;
 }
 
-main section:nth-child(4) > div {
+main section:nth-child(4) > a {
 	box-sizing: border-box;
 	min-height: 200px;
 	margin: 5% 0;
@@ -149,22 +150,22 @@ main section:nth-child(4) > div {
 	box-shadow: 0 5px 10px var(--gris-normal);
 }
 
-main section:nth-child(4) > div > div:nth-child(1) {
+main section:nth-child(4) > a > div:nth-child(1) {
 	height: 200px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;	
 }
 
-main section:nth-child(4) > div > div:nth-child(2) {
+main section:nth-child(4) > a > div:nth-child(2) {
 	padding: 5%;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div {
+main section:nth-child(4) > a > div:nth-child(2) > div {
 	position: relative;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div > div {
+main section:nth-child(4) > a > div:nth-child(2) > div > div {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -173,28 +174,59 @@ main section:nth-child(4) > div > div:nth-child(2) > div > div {
 	overflow: hidden;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div > div > div {
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
 	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: hidden;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div > div > div i {
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
 	font-size: 2em;
 	background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div > div > div:nth-child(1) {
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
 	max-width: 0;
 	transition: all 0.4s;
 }
 
-main section:nth-child(4) > div > div:nth-child(2) > div > div:hover > div:nth-child(1) {
+main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-child(1) {
 	max-width: 100px;
 }
+
+/* MAIN LES MENUS */
+
+main.menu {
+	padding: 200px 0 0 0;
+}
+
+main.menu::before {
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 240px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+main.menu.palette::before {
+	background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+}
+
+main.menu > div {
+	background-color: white;
+	border-radius: 40px 40px 0 0;
+	padding: 5%;
+}
+
+
 
 /* FOOTER */
 
