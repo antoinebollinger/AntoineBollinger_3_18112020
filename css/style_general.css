@@ -32,7 +32,7 @@ html, body {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ a {
 }
 
 footer a:hover {
-    color: var(--color-primary);
+    color: var(--color-tertiary);
 }
 
 i {

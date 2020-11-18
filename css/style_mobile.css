@@ -221,12 +221,117 @@ main.menu.palette::before {
 }
 
 main.menu > div {
-	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--gris-clair);
 	border-radius: 40px 40px 0 0;
 	padding: 5%;
+	margin-bottom: 2em;
 }
 
+main.menu > div > div {
+	margin-bottom: 1.5em;
+}
 
+main.menu > div > div {
+	width: 100%;
+}
+main.menu > div > div > p {
+	position: relative;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+main.menu > div > div > p::before {
+	content: "";
+	position: absolute;
+	left:0;
+	bottom:0;
+	height:3px;
+	width:50px;
+	background-color: var(--color-tertiary);
+}
+
+main.menu > div > div > div {
+	box-sizing: border-box;
+	height:60px;
+	padding: 0 0 0 5%;
+	margin-bottom: 1em;
+	border-radius: 15px;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 5px 10px var(--gris-normal);
+}
+
+main.menu > div > div > div > div:nth-child(1) {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;	
+}
+
+main.menu > div > div > div > div:nth-child(2) {
+	width: 60px;
+	flex: 0 0 auto;
+	text-align: center;
+}
+
+main.menu > div > div > div > div:nth-child(2) p {
+	font-weight: bold;
+}
+
+main.menu > div > div > div > div:nth-child(3) {
+	width: 60px;
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 0;
+	height: 100%;
+	color: white;
+	background-color: var(--color-tertiary);
+	transition: all 0.4s;
+}
+
+main.menu > div > div > div:hover > div:nth-child(3) {
+	max-width: 60px;
+}
+
+main.menu > div > div > div > div:nth-child(3) i {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+main.menu > div > div > div:hover > div:nth-child(3) i {
+	-webkit-animation: rotate .4s;
+	animation: rotate .4s;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 
 /* FOOTER */
 
