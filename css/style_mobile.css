@@ -38,6 +38,15 @@ header a, header h1 {
 	margin: 0;
 }
 
+header > a:nth-child(2) {
+	position: absolute;
+	left: 5%;
+}
+
+header > a:nth-child(2) i {
+	font-size: 1.4em;
+}
+
 /* MAIN PAGE ACCUEIL */
 
 main {
@@ -51,6 +60,10 @@ main {
 main section:nth-child(1) {
 	height: 50px;
 	background-color: var(--gris-moyen);
+}
+
+main section:nth-child(1) i {
+	margin-right: 0.5em;
 }
 
 /* Explorer nos restaurants */
@@ -92,6 +105,7 @@ main section:nth-child(3) > div > div:nth-child(1):hover {
 }
 
 main section:nth-child(3) > div > div:nth-child(1) i {
+	margin-right: 0.5em;
 	transition: all 0.4s;
 }
 
@@ -169,7 +183,7 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 2.1em;
+	width: 2em;
 	height: 100%;
 	overflow: hidden;
 }
@@ -178,11 +192,13 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 	overflow: hidden;
 }
 
 main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
-	font-size: 2em;
+	width: 100%;
+	font-size: 1.8em;
 	background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -197,7 +213,7 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-chi
 	max-width: 100px;
 }
 
-/* MAIN LES MENUS */
+/* PAGES DES MENUS */
 
 main.menu {
 	padding: 200px 0 0 0;
@@ -218,6 +234,31 @@ main.menu::before {
 
 main.menu.palette::before {
 	background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+}
+
+main.menu.delice::before {
+	background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+}
+
+main.menu.note::before {
+	background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+}
+
+main.menu.francaise::before {
+	background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+}
+
+main.menu h1 {
+	position:relative;
+	padding-right: 1.6em;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+main.menu h1 span {
+	position: absolute;
+	right:0;
 }
 
 main.menu > div {
@@ -241,7 +282,7 @@ main.menu > div > div > p {
 	position: relative;
 	text-transform: uppercase;
 	padding-bottom: 0.5em;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 }
 
 main.menu > div > div > p::before {
@@ -275,17 +316,19 @@ main.menu > div > div > div > div:nth-child(1) {
 main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
 	white-space:nowrap;
 	overflow:hidden;
-	text-overflow:ellipsis;	
+	text-overflow:ellipsis;
+	line-height: 25px;
 }
 
 main.menu > div > div > div > div:nth-child(2) {
-	width: 60px;
+	width: 70px;
 	flex: 0 0 auto;
 	text-align: center;
 }
 
 main.menu > div > div > div > div:nth-child(2) p {
 	font-weight: bold;
+	line-height: 25px;
 }
 
 main.menu > div > div > div > div:nth-child(3) {
@@ -307,7 +350,6 @@ main.menu > div > div > div:hover > div:nth-child(3) {
 
 main.menu > div > div > div > div:nth-child(3) i {
 	font-size: 1.5em;
-	margin: 0;
 }
 
 main.menu > div > div > div:hover > div:nth-child(3) i {
@@ -342,10 +384,14 @@ footer {
 }
 
 footer p {
-	margin-bottom: 0.4em;
+	margin-bottom: 0.6em;
 }
 
 footer > p:first-child {
 	font-family: 'Shrikhand', cursive;
-	margin-bottom: 0.8em;
+	margin-bottom: 1em;
+}
+
+footer i {
+	width:1.6em;
 }
