@@ -213,7 +213,7 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-chi
 	max-width: 100px;
 }
 
-/* PAGES DES MENUS */
+/* MAIN PAGE MENUS */
 
 main.menu {
 	padding: 200px 0 0 0;
@@ -267,8 +267,7 @@ main.menu > div {
 	align-items: center;
 	background-color: var(--gris-clair);
 	border-radius: 40px 40px 0 0;
-	padding: 5%;
-	margin-bottom: 2em;
+	padding: 5% 5% 2em 5%;
 }
 
 main.menu > div > div {
