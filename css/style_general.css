@@ -31,6 +31,10 @@ html, body {
 	font-size:100%;
 }
 
+body {
+	background-color: var(--gris-fonce);
+}
+
 h1 {
 	font-size: 1.6em;
 	font-weight: bold;
@@ -116,6 +120,7 @@ main section:nth-child(2) {
 
 main section:nth-child(3) {
 	align-items: unset;
+	background-color: white;	
 }
 
 main section:nth-child(3) > div {
@@ -399,7 +404,7 @@ main.menu > div > div > div:hover > div:nth-child(3) i {
 /* FOOTER */
 
 footer {
-	padding: 5%;
+	position: relative; padding: 5%;
 	background-color: var(--gris-fonce);
 	color: white;
 }
