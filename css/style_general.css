@@ -11,7 +11,7 @@
     --gris-moyen:#eaeaea;
     --gris-normal:#C0C0C0;
 	--gris-fonce:#353535;
-	--max-width:1400px;
+	--max-width:1000px;
 }
 
 /* GENERALITES */
@@ -61,7 +61,7 @@ p {
 a {
 	text-decoration:none;
     color:inherit;
-    transition: all 0.4s;
+    transition: all 0.2s;
 }
 
 footer a:hover {
@@ -72,7 +72,7 @@ footer a:hover {
 
 button {
     display: inline-block;
-    min-height: 50px;
+    height: 50px;
     line-height: 50px;
     padding: 0 10%;
     box-shadow: 0 5px 10px var(--gris-normal);
@@ -89,4 +89,330 @@ button {
 button:hover {
     background: linear-gradient(180deg, rgba(255,121,218,0.8) 0%, rgba(147,86,220,0.8) 100%);
     box-shadow: 0 4px 5px var(--gris-normal);
+}
+
+/* MAIN */
+
+/* Localisation */
+
+main section:nth-child(1) {
+	height: 50px;
+	background-color: var(--gris-moyen);
+}
+
+main section:nth-child(1) i {
+	margin-right: 0.5em;
+}
+
+/* Explorer nos restaurants */
+
+main section:nth-child(2) {
+	min-height: 300px;
+	text-align: center;
+	background-color: var(--gris-clair);
+}
+
+/* Fonctionnement */
+
+main section:nth-child(3) {
+	align-items: unset;
+}
+
+main section:nth-child(3) > div {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 0 0 15px;
+	margin: 5% 0;
+	width: 100%;
+	height: 80px;
+	cursor: pointer;
+}
+
+main section:nth-child(3) > div > div:nth-child(1) {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 5% 0 30px;
+	border-radius: 20px;
+	background-color: var(--gris-clair);
+	box-shadow: 0 5px 10px var(--gris-normal);
+	transition: all 0.4s;
+}
+
+main section:nth-child(3) > div > div:nth-child(1):hover {
+	background-color: rgba(147,86,220,0.1);
+}
+
+main section:nth-child(3) > div > div:nth-child(1) i {
+	margin-right: 0.5em;
+	transition: all 0.4s;
+}
+
+main section:nth-child(3) > div > div:nth-child(1):hover i {
+	color: var(--color-primary);
+}
+
+main section:nth-child(3) > div > div:nth-child(2) {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 25px;
+	left: 0;
+	width:30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--color-primary);
+	color: white;
+}
+
+/* Restaurants */
+
+main section:nth-child(4) {
+	background-color: var(--gris-clair);
+	align-items: unset;
+}
+
+main section:nth-child(4) > a {
+	box-sizing: border-box;
+	min-height: 200px;
+	margin: 5% 0;
+	background-color: white;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 5px 10px var(--gris-normal);
+}
+
+main section:nth-child(4) > a > div:nth-child(1) {
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+
+main section:nth-child(4) > a > div:nth-child(2) {
+	padding: 5%;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div {
+	position: relative;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2em;
+	height: 100%;
+	overflow: hidden;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
+	width: 100%;
+	font-size: 1.8em;
+	background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
+	max-width: 0;
+	transition: all 0.4s;
+}
+
+main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-child(1) {
+	max-width: 100px;
+}
+
+/*  photos des menus */
+
+main section:nth-child(4) > a:nth-child(2) > div:nth-child(1), main.menu.palette::before {
+	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
+}
+
+main section:nth-child(4) > a:nth-child(3) > div:nth-child(1), main.menu.note::before {
+	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
+}
+
+main section:nth-child(4) > a:nth-child(4) > div:nth-child(1), main.menu.francaise::before {
+	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
+}
+
+main section:nth-child(4) > a:nth-child(5) > div:nth-child(1), main.menu.delice::before {
+	background-image: url('../images/restaurants/miniatures/le-delice-des-sens.jpg');
+}
+
+/* MAIN PAGE MENUS */
+
+main.menu {
+	padding: 200px 0 0 0;
+}
+
+main.menu::before {
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 240px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+main.menu h1 {
+	position:relative;
+	padding-right: 1.6em;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+main.menu h1 span {
+	position: absolute;
+	right:0;
+}
+
+main.menu > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--gris-clair);
+	border-radius: 40px 40px 0 0;
+	padding: 5% 5% 2em 5%;
+}
+
+main.menu > div > div {
+	margin-bottom: 1.5em;
+}
+
+main.menu > div > div {
+	width: 100%;
+}
+main.menu > div > div > p {
+	position: relative;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+main.menu > div > div > p::before {
+	content: "";
+	position: absolute;
+	left:0;
+	bottom:0;
+	height:3px;
+	width:50px;
+	background-color: var(--color-tertiary);
+}
+
+main.menu > div > div > div {
+	box-sizing: border-box;
+	height:60px;
+	padding: 0 0 0 5%;
+	margin-bottom: 1em;
+	border-radius: 15px;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 5px 10px var(--gris-normal);
+	cursor: pointer;
+}
+
+main.menu > div > div > div > div:nth-child(1) {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	line-height: 25px;
+}
+
+main.menu > div > div > div > div:nth-child(2) {
+	width: 70px;
+	flex: 0 0 auto;
+	text-align: center;
+}
+
+main.menu > div > div > div > div:nth-child(2) p {
+	font-weight: bold;
+	line-height: 25px;
+}
+
+main.menu > div > div > div > div:nth-child(3) {
+	width: 60px;
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 0;
+	height: 100%;
+	color: white;
+	background-color: var(--color-tertiary);
+	transition: all 0.4s;
+}
+
+main.menu > div > div > div:hover > div:nth-child(3) {
+	max-width: 60px;
+}
+
+main.menu > div > div > div > div:nth-child(3) i {
+	font-size: 1.5em;
+}
+
+main.menu > div > div > div:hover > div:nth-child(3) i {
+	-webkit-animation: rotate .4s;
+	animation: rotate .4s;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* FOOTER */
+
+footer {
+	padding: 5%;
+	background-color: var(--gris-fonce);
+	color: white;
+}
+
+footer p {
+	margin-bottom: 0.6em;
+}
+
+footer > p:first-child {
+	font-family: 'Shrikhand', cursive;
+	margin-bottom: 1em;
+}
+
+footer i {
+	width:1.6em;
 }
