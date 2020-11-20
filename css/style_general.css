@@ -65,7 +65,8 @@ p {
 a {
 	text-decoration:none;
     color:inherit;
-    transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
 }
 
 footer a:hover {
@@ -87,7 +88,8 @@ button {
     background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     color: white;
     cursor: pointer;
-    transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
 }
 
 button:hover {
@@ -141,6 +143,7 @@ main section:nth-child(3) > div > div:nth-child(1) {
 	border-radius: 20px;
 	background-color: var(--gris-clair);
 	box-shadow: 0 5px 10px var(--gris-normal);
+	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
@@ -150,6 +153,7 @@ main section:nth-child(3) > div > div:nth-child(1):hover {
 
 main section:nth-child(3) > div > div:nth-child(1) i {
 	margin-right: 0.5em;
+	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
@@ -223,6 +227,9 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
 main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
 	width: 100%;
 	font-size: 1.8em;
+}
+	
+main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) i {	
 	background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -230,6 +237,7 @@ main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
 
 main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
 	max-width: 0;
+	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
@@ -367,6 +375,7 @@ main.menu > div > div > div > div:nth-child(3) {
 	height: 100%;
 	color: white;
 	background-color: var(--color-tertiary);
+	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
