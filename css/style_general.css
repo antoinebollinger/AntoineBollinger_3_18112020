@@ -62,8 +62,8 @@ button {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: white;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
   button:hover {
     background: linear-gradient(180deg, rgba(255, 121, 218, 0.7) 0%, rgba(147, 86, 220, 0.7) 100%);
     box-shadow: 0 4px 5px #C0C0C0; }
