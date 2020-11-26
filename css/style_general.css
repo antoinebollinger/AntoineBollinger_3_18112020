@@ -164,7 +164,8 @@ main section:nth-child(4) {
               font-size: 1.8em;
               background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
               -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent; }
+              -webkit-text-fill-color: transparent;
+              background-clip: text; }
             main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
               max-width: 0;
               -webkit-transition: all 0.4s;
