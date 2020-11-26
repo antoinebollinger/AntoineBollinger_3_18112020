@@ -1,432 +1,454 @@
 /* STYLE GENERAL
 ================================================== */
-
 /* FONTS & COLORS */
-
-:root {
-	--color-primary:#9356DC;
-	--color-secondary:#FF79DA;
-    --color-tertiary:#99E2D0;
-    --gris-clair:#f6f6f6;
-    --gris-moyen:#eaeaea;
-    --gris-normal:#C0C0C0;
-	--gris-fonce:#353535;
-	--max-width:1000px;
-}
-
 /* GENERALITES */
+/* Reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
 
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,menu,time,mark,audio,video {
-	margin:0;
-	padding:0;
-	border:0;
-	outline:0;
-	vertical-align:baseline;
-	background:transparent;
-}
-
+/* General */
 html, body {
-	width:100%;
-	height:100%;
-	font-size:100%;
-}
+  width: 100%;
+  height: 100%;
+  font-size: 100%; }
 
 body {
-	background-color: var(--gris-fonce);
-}
+  background-color: #353535; }
 
 h1 {
-	font-size: 1.6em;
-	font-weight: bold;
-}
+  font-size: 1.6em;
+  font-weight: bold; }
 
 h2 {
-	font-size: 1.4em;
-	font-weight: bold;
-}
+  font-size: 1.4em;
+  font-weight: bold; }
 
 h3 {
-	font-size: 1.2em;
-	font-weight: bold;
-}
+  font-size: 1.2em;
+  font-weight: bold; }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
-}
+  font-family: 'Shrikhand', cursive; }
 
 h2, h3, p, a {
-    font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
+
 p {
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-}
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif; }
 
 a {
-	text-decoration:none;
-    color:inherit;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-footer a:hover {
-    color: var(--color-tertiary);
-}
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
 
 /* BOUTONS */
-
 button {
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 10%;
-    box-shadow: 0 5px 10px var(--gris-normal);
-    border-radius: 25px;
-    border: none;
-    font: normal 1em 'Roboto', sans-serif;
-    text-align: center;
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-    color: white;
-    cursor: pointer;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-button:hover {
-    background: linear-gradient(180deg, rgba(255,121,218,0.8) 0%, rgba(147,86,220,0.8) 100%);
-    box-shadow: 0 4px 5px var(--gris-normal);
-}
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10%;
+  box-shadow: 0 5px 10px #C0C0C0;
+  border-radius: 25px;
+  border: none;
+  font: normal 1em 'Roboto', sans-serif;
+  text-align: center;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  button:hover {
+    background: linear-gradient(180deg, rgba(255, 121, 218, 0.7) 0%, rgba(147, 86, 220, 0.7) 100%);
+    box-shadow: 0 4px 5px #C0C0C0; }
 
 /* MAIN */
-
 /* Localisation */
-
 main section:nth-child(1) {
-	height: 50px;
-	background-color: var(--gris-moyen);
-}
-
-main section:nth-child(1) i {
-	margin-right: 0.5em;
-}
+  height: 50px;
+  background-color: #eaeaea; }
+  main section:nth-child(1) i {
+    margin-right: 0.5em; }
 
 /* Explorer nos restaurants */
-
 main section:nth-child(2) {
-	min-height: 300px;
-	text-align: center;
-	background-color: var(--gris-clair);
-}
+  min-height: 300px;
+  text-align: center;
+  background-color: #f6f6f6; }
 
 /* Fonctionnement */
-
 main section:nth-child(3) {
-	align-items: unset;
-	background-color: white;	
-}
-
-main section:nth-child(3) > div {
-	position: relative;
-	box-sizing: border-box;
-	padding: 0 0 0 15px;
-	margin: 5% 0;
-	width: 100%;
-	height: 80px;
-	cursor: pointer;
-}
-
-main section:nth-child(3) > div > div:nth-child(1) {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	padding: 0 5% 0 30px;
-	border-radius: 20px;
-	background-color: var(--gris-clair);
-	box-shadow: 0 5px 10px var(--gris-normal);
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-main section:nth-child(3) > div > div:nth-child(1):hover {
-	background-color: rgba(147,86,220,0.1);
-}
-
-main section:nth-child(3) > div > div:nth-child(1) i {
-	margin-right: 0.5em;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-main section:nth-child(3) > div > div:nth-child(1):hover i {
-	color: var(--color-primary);
-}
-
-main section:nth-child(3) > div > div:nth-child(2) {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 25px;
-	left: 0;
-	width:30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: var(--color-primary);
-	color: white;
-}
+  align-items: unset;
+  background-color: white; }
+  main section:nth-child(3) > div {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 0 0 15px;
+    margin: 5% 0;
+    width: 100%;
+    height: 80px;
+    cursor: pointer; }
+    main section:nth-child(3) > div > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 5% 0 30px;
+      border-radius: 20px;
+      background-color: #f6f6f6;
+      box-shadow: 0 5px 10px #C0C0C0;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s; }
+      main section:nth-child(3) > div > div:nth-child(1) i {
+        margin-right: 0.5em;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s; }
+    main section:nth-child(3) > div > div:nth-child(2) {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 25px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #9356DC;
+      color: white; }
+    main section:nth-child(3) > div:hover > div:nth-child(1) {
+      background-color: rgba(147, 86, 220, 0.1); }
+    main section:nth-child(3) > div:hover i {
+      color: #9356DC; }
 
 /* Restaurants */
-
 main section:nth-child(4) {
-	background-color: var(--gris-clair);
-	align-items: unset;
-}
-
-main section:nth-child(4) > a {
-	box-sizing: border-box;
-	min-height: 200px;
-	margin: 5% 0;
-	background-color: white;
-	border-radius: 15px;
-	overflow: hidden;
-	box-shadow: 0 5px 10px var(--gris-normal);
-}
-
-main section:nth-child(4) > a > div:nth-child(1) {
-	height: 200px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;	
-}
-
-main section:nth-child(4) > a > div:nth-child(2) {
-	padding: 5%;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div {
-	position: relative;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div > div {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 2em;
-	height: 100%;
-	overflow: hidden;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
-	width: 100%;
-	font-size: 1.8em;
-}
-	
-main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) i {	
-	background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
-	max-width: 0;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-child(1) {
-	max-width: 100px;
-}
+  background-color: #f6f6f6;
+  align-items: unset; }
+  main section:nth-child(4) > a {
+    box-sizing: border-box;
+    min-height: 200px;
+    margin: 5% 0;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px #C0C0C0; }
+    main section:nth-child(4) > a > div:nth-child(1) {
+      height: 200px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    main section:nth-child(4) > a > div:nth-child(2) {
+      padding: 5%; }
+      main section:nth-child(4) > a > div:nth-child(2) > div {
+        position: relative; }
+        main section:nth-child(4) > a > div:nth-child(2) > div > div {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2em;
+          height: 100%;
+          overflow: hidden; }
+          main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden; }
+            main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
+              width: 100%;
+              font-size: 1.8em;
+              background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent; }
+            main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
+              max-width: 0;
+              -webkit-transition: all 0.4s;
+              transition: all 0.4s; }
+          main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-child(1) {
+            max-width: 100px; }
 
 /*  photos des menus */
-
 main section:nth-child(4) > a:nth-child(2) > div:nth-child(1), main.menu.palette::before {
-	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
-}
+  background-image: url("../images/restaurants/miniatures/la-palette-du-gout.jpg"); }
 
 main section:nth-child(4) > a:nth-child(3) > div:nth-child(1), main.menu.note::before {
-	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
-}
+  background-image: url("../images/restaurants/miniatures/la-note-enchantee.jpg"); }
 
 main section:nth-child(4) > a:nth-child(4) > div:nth-child(1), main.menu.francaise::before {
-	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
-}
+  background-image: url("../images/restaurants/miniatures/a-la-francaise.jpg"); }
 
 main section:nth-child(4) > a:nth-child(5) > div:nth-child(1), main.menu.delice::before {
-	background-image: url('../images/restaurants/miniatures/le-delice-des-sens.jpg');
-}
+  background-image: url("../images/restaurants/miniatures/le-delice-des-sens.jpg"); }
 
 /* MAIN PAGE MENUS */
-
 main.menu {
-	padding: 200px 0 0 0;
-}
+  padding: 200px 0 0 0; }
+  main.menu::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; }
+  main.menu h1 {
+    position: relative;
+    padding-right: 1.6em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    main.menu h1 span {
+      position: absolute;
+      right: 0; }
+  main.menu > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    padding: 5% 5% 2em 5%; }
+    main.menu > div > div {
+      margin-bottom: 1.5em;
+      width: 100%; }
+      main.menu > div > div > p {
+        position: relative;
+        text-transform: uppercase;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em; }
+        main.menu > div > div > p::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          width: 50px;
+          background-color: #99E2D0; }
+      main.menu > div > div > div {
+        box-sizing: border-box;
+        height: 60px;
+        padding: 0 0 0 5%;
+        margin-bottom: 1em;
+        border-radius: 15px;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 5px 10px #C0C0C0;
+        cursor: pointer; }
+        main.menu > div > div > div > div:nth-child(1) {
+          flex: 1 1 auto;
+          min-width: 0; }
+          main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
+            line-height: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+        main.menu > div > div > div > div:nth-child(2) {
+          width: 70px;
+          flex: 0 0 auto;
+          text-align: center; }
+          main.menu > div > div > div > div:nth-child(2) p {
+            font-weight: bold;
+            line-height: 25px; }
+        main.menu > div > div > div > div:nth-child(3) {
+          width: 60px;
+          flex: 0 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 0;
+          height: 100%;
+          color: white;
+          background-color: #99E2D0;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s; }
+          main.menu > div > div > div > div:nth-child(3) i {
+            font-size: 1.5em; }
+        main.menu > div > div > div:hover > div:nth-child(3) {
+          max-width: 60px; }
+          main.menu > div > div > div:hover > div:nth-child(3) i {
+            -webkit-animation: rotate .4s;
+            animation: rotate .4s; }
 
-main.menu::before {
-	content: "";
-	position: absolute;
-	top: 80px;
-	left: 0;
-	width: 100%;
-	height: 240px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: -1;
-}
+main.menu > div > div:nth-child(n + 2), main.menu > div > div > div:nth-child(n + 2) {
+  -webkit-animation-name: fading_entrance;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fading_entrance;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; }
 
-main.menu h1 {
-	position:relative;
-	padding-right: 1.6em;
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
+main.menu > div > div:nth-child(n + 2) {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
 
-main.menu h1 span {
-	position: absolute;
-	right:0;
-}
+main.menu > div > div > div:nth-child(n + 2) {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s; }
 
-main.menu > div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--gris-clair);
-	border-radius: 40px 40px 0 0;
-	padding: 5% 5% 2em 5%;
-}
-
-main.menu > div > div {
-	margin-bottom: 1.5em;
-}
-
-main.menu > div > div {
-	width: 100%;
-}
-main.menu > div > div > p {
-	position: relative;
-	text-transform: uppercase;
-	padding-bottom: 0.5em;
-	margin-bottom: 1em;
-}
-
-main.menu > div > div > p::before {
-	content: "";
-	position: absolute;
-	left:0;
-	bottom:0;
-	height:3px;
-	width:50px;
-	background-color: var(--color-tertiary);
-}
-
-main.menu > div > div > div {
-	box-sizing: border-box;
-	height:60px;
-	padding: 0 0 0 5%;
-	margin-bottom: 1em;
-	border-radius: 15px;
-	display: flex;
-	overflow: hidden;
-	align-items: center;
-	background-color: white;
-	box-shadow: 0 5px 10px var(--gris-normal);
-	cursor: pointer;
-}
-
-main.menu > div > div > div > div:nth-child(1) {
-	flex: 1 1 auto;
-	min-width: 0;
-}
-
-main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-	line-height: 25px;
-}
-
-main.menu > div > div > div > div:nth-child(2) {
-	width: 70px;
-	flex: 0 0 auto;
-	text-align: center;
-}
-
-main.menu > div > div > div > div:nth-child(2) p {
-	font-weight: bold;
-	line-height: 25px;
-}
-
-main.menu > div > div > div > div:nth-child(3) {
-	width: 60px;
-	flex: 0 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 0;
-	height: 100%;
-	color: white;
-	background-color: var(--color-tertiary);
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-main.menu > div > div > div:hover > div:nth-child(3) {
-	max-width: 60px;
-}
-
-main.menu > div > div > div > div:nth-child(3) i {
-	font-size: 1.5em;
-}
-
-main.menu > div > div > div:hover > div:nth-child(3) i {
-	-webkit-animation: rotate .4s;
-	animation: rotate .4s;
-}
-
-@-webkit-keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
+/* LOAGING SPINNER */
+div.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #99E2D0;
+  -webkit-animation-name: loading;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-name: loading;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 1.5s; }
+  div.loading i {
+    font-size: 3em;
+    margin-bottom: 1em;
+    -webkit-animation-name: beating;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 0.4s;
+    animation-name: beating;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s; }
+  div.loading h3 span {
+    opacity: 0;
+    -webkit-animation-name: trois_points;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.5s;
+    animation-name: trois_points;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s; }
+    div.loading h3 span:nth-child(1) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s; }
+    div.loading h3 span:nth-child(2) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s; }
+    div.loading h3 span:nth-child(3) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s; }
 
 /* FOOTER */
-
 footer {
-	position: relative; padding: 5%;
-	background-color: var(--gris-fonce);
-	color: white;
-}
+  position: relative;
+  padding: 5%;
+  background-color: #353535;
+  color: white; }
+  footer p {
+    margin-bottom: 0.6em; }
+  footer > p {
+    font-family: 'Shrikhand', cursive;
+    margin-bottom: 1em; }
+  footer i {
+    width: 1.6em; }
+  footer a:hover {
+    color: #99E2D0; }
 
-footer p {
-	margin-bottom: 0.6em;
-}
+/* KEY-FRAMES */
+/* ANIMATION LOADING PAGE */
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+    bottom: 0; }
+  99% {
+    opacity: 0;
+    bottom: 0; }
+  100% {
+    opacity: 0;
+    bottom: 100%; } }
+@keyframes loading {
+  0% {
+    opacity: 1;
+    bottom: 0; }
+  99% {
+    opacity: 0;
+    bottom: 0; }
+  100% {
+    opacity: 0;
+    bottom: 100%; } }
+@-webkit-keyframes beating {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes beating {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  25% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg); }
+  50% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  75% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); } }
+@keyframes trois_points {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* ANIMATION ARRIVEE PAGE MENU*/
+@-webkit-keyframes fading_entrance {
+  0% {
+    opacity: 0;
+    margin-top: 20px; }
+  10% {
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
+@keyframes fading_entrance {
+  0% {
+    opacity: 0;
+    margin-top: 20px; }
+  10% {
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
+/* ANIMATION PLATS */
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
-footer > p:first-child {
-	font-family: 'Shrikhand', cursive;
-	margin-bottom: 1em;
-}
-
-footer i {
-	width:1.6em;
-}
+/*# sourceMappingURL=style_general.css.map */
