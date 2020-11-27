@@ -19,7 +19,9 @@ header {
   z-index: 999; }
   header nav {
     width: 1000px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box; }
     header nav > a:nth-child(2) {
       display: none; }
 
