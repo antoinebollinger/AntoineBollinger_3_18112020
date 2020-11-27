@@ -108,7 +108,7 @@ button {
 
 /* Localisation */
 
-main section:nth-child(1) {
+section.localisation {
 	height: 50px;
 	background-color: $gris-moyen;
 	i {
@@ -118,7 +118,7 @@ main section:nth-child(1) {
 
 /* Explorer nos restaurants */
 
-main section:nth-child(2) {
+section.presentation {
 	min-height: 300px;
 	text-align: center;
 	background-color: $gris-clair;
@@ -126,7 +126,7 @@ main section:nth-child(2) {
 
 /* Fonctionnement */
 
-main section:nth-child(3) {
+section.fonctionnement {
 	align-items: unset;
     background-color: white;
     > div {
@@ -168,7 +168,7 @@ main section:nth-child(3) {
         }
         &:hover {
             > div:nth-child(1) {
-                background-color: rgba(147,86,220,0.1);
+                background-color: color-primary--opacity(0.2);
             }
             i {
                 color: $color-primary; 
@@ -179,7 +179,7 @@ main section:nth-child(3) {
 
 /* Restaurants */
 
-main section:nth-child(4) {
+section.restaurant {
 	background-color: $gris-clair;
     align-items: unset;
     > a {
@@ -190,66 +190,62 @@ main section:nth-child(4) {
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 5px 10px $gris-normal;
-        > div {
-            &:nth-child(1) {
-                height: 200px;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;	               
-            }
-            &:nth-child(2) {
-                padding: 5%;
+        div.card__picture {
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;	     
+        }
+        div.card__text {
+            padding: 5%;
+            > div {
+                position: relative;
                 > div {
-                    position: relative;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 2em;
+                    height: 100%;
+                    overflow: hidden;
                     > div {
                         position: absolute;
                         top: 0;
-                        right: 0;
-                        width: 2em;
-                        height: 100%;
+                        left: 0;
+                        width: 100%;
                         overflow: hidden;
-                        > div {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
+                        i {
                             width: 100%;
-                            overflow: hidden;
-                            i {
-                                width: 100%;
-                                font-size: 1.8em;
-                                background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                                -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                background-clip: text;
-                            }
-                            &:nth-child(1) {
-                                max-width: 0;
-                                -webkit-transition: all 0.4s;
-                                transition: all 0.4s;
-                            }
+                            font-size: 1.8em;
+                            background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
                         }
-                        &:hover > div:nth-child(1) {
-                            max-width: 100px;
+                        &:nth-child(1) {
+                            max-width: 0;
+                            -webkit-transition: all 0.4s;
+                            transition: all 0.4s;
                         }
+                    }
+                    &:hover > div:nth-child(1) {
+                        max-width: 100px;
                     }
                 }
             }
-
         }
     }
 }
 
 /*  photos des menus */
 
-main section:nth-child(4) > a:nth-child(2) > div:nth-child(1), main.menu.palette::before {
+section.restaurant > a:nth-child(2) div.card__picture, main.menu.palette::before {
 	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
 }
 
-main section:nth-child(4) > a:nth-child(3) > div:nth-child(1), main.menu.note::before {
+section.restaurant > a:nth-child(3) div.card__picture, main.menu.note::before {
 	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
 }
 
-main section:nth-child(4) > a:nth-child(4) > div:nth-child(1), main.menu.francaise::before {
+section.restaurant > a:nth-child(4) div.card__picture, main.menu.francaise::before {
 	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
 }
 
@@ -284,7 +280,7 @@ main.menu {
             right:0;
         }
     }
-    > div {
+    section {
         display: flex;
         flex-direction: column;
         align-items: center;

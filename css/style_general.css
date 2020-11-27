@@ -70,23 +70,23 @@ button {
 
 /* MAIN */
 /* Localisation */
-main section:nth-child(1) {
+section.localisation {
   height: 50px;
   background-color: #eaeaea; }
-  main section:nth-child(1) i {
+  section.localisation i {
     margin-right: 0.5em; }
 
 /* Explorer nos restaurants */
-main section:nth-child(2) {
+section.presentation {
   min-height: 300px;
   text-align: center;
   background-color: #f6f6f6; }
 
 /* Fonctionnement */
-main section:nth-child(3) {
+section.fonctionnement {
   align-items: unset;
   background-color: white; }
-  main section:nth-child(3) > div {
+  section.fonctionnement > div {
     position: relative;
     box-sizing: border-box;
     padding: 0 0 0 15px;
@@ -94,7 +94,7 @@ main section:nth-child(3) {
     width: 100%;
     height: 80px;
     cursor: pointer; }
-    main section:nth-child(3) > div > div:nth-child(1) {
+    section.fonctionnement > div > div:nth-child(1) {
       display: flex;
       align-items: center;
       height: 100%;
@@ -104,11 +104,11 @@ main section:nth-child(3) {
       box-shadow: 0 5px 10px #C0C0C0;
       -webkit-transition: all 0.4s;
       transition: all 0.4s; }
-      main section:nth-child(3) > div > div:nth-child(1) i {
+      section.fonctionnement > div > div:nth-child(1) i {
         margin-right: 0.5em;
         -webkit-transition: all 0.4s;
         transition: all 0.4s; }
-    main section:nth-child(3) > div > div:nth-child(2) {
+    section.fonctionnement > div > div:nth-child(2) {
       position: absolute;
       display: flex;
       align-items: center;
@@ -120,16 +120,16 @@ main section:nth-child(3) {
       border-radius: 50%;
       background-color: #9356DC;
       color: white; }
-    main section:nth-child(3) > div:hover > div:nth-child(1) {
-      background-color: rgba(147, 86, 220, 0.1); }
-    main section:nth-child(3) > div:hover i {
+    section.fonctionnement > div:hover > div:nth-child(1) {
+      background-color: rgba(147, 86, 220, 0.2); }
+    section.fonctionnement > div:hover i {
       color: #9356DC; }
 
 /* Restaurants */
-main section:nth-child(4) {
+section.restaurant {
   background-color: #f6f6f6;
   align-items: unset; }
-  main section:nth-child(4) > a {
+  section.restaurant > a {
     box-sizing: border-box;
     min-height: 200px;
     margin: 5% 0;
@@ -137,50 +137,49 @@ main section:nth-child(4) {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 10px #C0C0C0; }
-    main section:nth-child(4) > a > div:nth-child(1) {
+    section.restaurant > a div.card__picture {
       height: 200px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat; }
-    main section:nth-child(4) > a > div:nth-child(2) {
+    section.restaurant > a div.card__text {
       padding: 5%; }
-      main section:nth-child(4) > a > div:nth-child(2) > div {
+      section.restaurant > a div.card__text > div {
         position: relative; }
-        main section:nth-child(4) > a > div:nth-child(2) > div > div {
+        section.restaurant > a div.card__text > div > div {
           position: absolute;
           top: 0;
           right: 0;
           width: 2em;
           height: 100%;
           overflow: hidden; }
-          main section:nth-child(4) > a > div:nth-child(2) > div > div > div {
+          section.restaurant > a div.card__text > div > div > div {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             overflow: hidden; }
-            main section:nth-child(4) > a > div:nth-child(2) > div > div > div i {
+            section.restaurant > a div.card__text > div > div > div i {
               width: 100%;
               font-size: 1.8em;
               background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
               -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              background-clip: text; }
-            main section:nth-child(4) > a > div:nth-child(2) > div > div > div:nth-child(1) {
+              -webkit-text-fill-color: transparent; }
+            section.restaurant > a div.card__text > div > div > div:nth-child(1) {
               max-width: 0;
               -webkit-transition: all 0.4s;
               transition: all 0.4s; }
-          main section:nth-child(4) > a > div:nth-child(2) > div > div:hover > div:nth-child(1) {
+          section.restaurant > a div.card__text > div > div:hover > div:nth-child(1) {
             max-width: 100px; }
 
 /*  photos des menus */
-main section:nth-child(4) > a:nth-child(2) > div:nth-child(1), main.menu.palette::before {
+section.restaurant > a:nth-child(2) div.card__picture, main.menu.palette::before {
   background-image: url("../images/restaurants/miniatures/la-palette-du-gout.jpg"); }
 
-main section:nth-child(4) > a:nth-child(3) > div:nth-child(1), main.menu.note::before {
+section.restaurant > a:nth-child(3) div.card__picture, main.menu.note::before {
   background-image: url("../images/restaurants/miniatures/la-note-enchantee.jpg"); }
 
-main section:nth-child(4) > a:nth-child(4) > div:nth-child(1), main.menu.francaise::before {
+section.restaurant > a:nth-child(4) div.card__picture, main.menu.francaise::before {
   background-image: url("../images/restaurants/miniatures/a-la-francaise.jpg"); }
 
 main section:nth-child(4) > a:nth-child(5) > div:nth-child(1), main.menu.delice::before {
@@ -209,22 +208,22 @@ main.menu {
     main.menu h1 span {
       position: absolute;
       right: 0; }
-  main.menu > div {
+  main.menu section {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f6f6f6;
     border-radius: 40px 40px 0 0;
     padding: 5% 5% 2em 5%; }
-    main.menu > div > div {
+    main.menu section > div {
       margin-bottom: 1.5em;
       width: 100%; }
-      main.menu > div > div > p {
+      main.menu section > div > p {
         position: relative;
         text-transform: uppercase;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
-        main.menu > div > div > p::before {
+        main.menu section > div > p::before {
           content: "";
           position: absolute;
           left: 0;
@@ -232,7 +231,7 @@ main.menu {
           height: 3px;
           width: 50px;
           background-color: #99E2D0; }
-      main.menu > div > div > div {
+      main.menu section > div > div {
         box-sizing: border-box;
         height: 60px;
         padding: 0 0 0 5%;
@@ -244,22 +243,22 @@ main.menu {
         background-color: white;
         box-shadow: 0 5px 10px #C0C0C0;
         cursor: pointer; }
-        main.menu > div > div > div > div:nth-child(1) {
+        main.menu section > div > div > div:nth-child(1) {
           flex: 1 1 auto;
           min-width: 0; }
-          main.menu > div > div > div > div:nth-child(1) p, main.menu > div > div > div > div:nth-child(1) h3 {
+          main.menu section > div > div > div:nth-child(1) p, main.menu section > div > div > div:nth-child(1) h3 {
             line-height: 25px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-        main.menu > div > div > div > div:nth-child(2) {
+        main.menu section > div > div > div:nth-child(2) {
           width: 70px;
           flex: 0 0 auto;
           text-align: center; }
-          main.menu > div > div > div > div:nth-child(2) p {
+          main.menu section > div > div > div:nth-child(2) p {
             font-weight: bold;
             line-height: 25px; }
-        main.menu > div > div > div > div:nth-child(3) {
+        main.menu section > div > div > div:nth-child(3) {
           width: 60px;
           flex: 0 0 auto;
           display: flex;
@@ -271,11 +270,11 @@ main.menu {
           background-color: #99E2D0;
           -webkit-transition: all 0.4s;
           transition: all 0.4s; }
-          main.menu > div > div > div > div:nth-child(3) i {
+          main.menu section > div > div > div:nth-child(3) i {
             font-size: 1.5em; }
-        main.menu > div > div > div:hover > div:nth-child(3) {
+        main.menu section > div > div:hover > div:nth-child(3) {
           max-width: 60px; }
-          main.menu > div > div > div:hover > div:nth-child(3) i {
+          main.menu section > div > div:hover > div:nth-child(3) i {
             -webkit-animation: rotate .4s;
             animation: rotate .4s; }
 
