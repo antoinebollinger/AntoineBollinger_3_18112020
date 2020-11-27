@@ -278,7 +278,7 @@ main.menu {
             -webkit-animation: rotate .4s;
             animation: rotate .4s; }
 
-main.menu > div > div:nth-child(n + 2), main.menu > div > div > div:nth-child(n + 2) {
+main.menu > section > div:nth-child(n + 2), main.menu > section > div > div:nth-child(n + 2) {
   -webkit-animation-name: fading_entrance;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
@@ -286,13 +286,13 @@ main.menu > div > div:nth-child(n + 2), main.menu > div > div > div:nth-child(n 
   animation-timing-function: ease;
   animation-fill-mode: forwards; }
 
-main.menu > div > div:nth-child(n + 2) {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s; }
+main.menu > section > div:nth-child(n + 2) {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
 
-main.menu > div > div > div:nth-child(n + 2) {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s; }
+main.menu > section > div > div:nth-child(n + 2) {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
 
 /* LOAGING SPINNER */
 div.loading {
@@ -425,7 +425,7 @@ footer {
   0% {
     opacity: 0;
     margin-top: 20px; }
-  10% {
+  50% {
     opacity: 1; }
   100% {
     opacity: 1;
@@ -434,7 +434,7 @@ footer {
   0% {
     opacity: 0;
     margin-top: 20px; }
-  10% {
+  50% {
     opacity: 1; }
   100% {
     opacity: 1;
