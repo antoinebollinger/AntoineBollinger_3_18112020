@@ -366,8 +366,9 @@ main.menu {
     }
 }
 
-main.menu > section > div:nth-child(n + 2), main.menu > section > div > div:nth-child(n + 2) {
-	-webkit-animation-name: fading_entrance;
+@mixin fading {
+    opacity: 0;
+    -webkit-animation-name: fading_entrance;
     -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: forwards;
     animation-name: fading_entrance;
@@ -375,13 +376,26 @@ main.menu > section > div:nth-child(n + 2), main.menu > section > div > div:nth-
     animation-fill-mode: forwards;
 }
 
-main.menu > section > div:nth-child(n + 2) {
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;	
-}
-main.menu > section > div > div:nth-child(n + 2) {
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
+$var: entree, plat, dessert; $i: 0;
+main.menu section {
+    > div:nth-child(n + 2) {
+        @include fading;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;	   
+    }
+    > div > div:nth-child(n + 2) {
+        @include fading;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s; 
+    }
+    @each $key in $var {
+        div.#{$key}, div.#{$key} > div:nth-child(n + 2) {
+            -webkit-animation-delay: #{$i*0.5}s;
+            animation-delay: #{$i*0.5}s;    
+        }
+        $i: $i + 1;
+    }
+
 }
 
 /* LOAGING SPINNER */ 
@@ -434,18 +448,13 @@ div.loading {
             animation-timing-function: ease;
             animation-fill-mode: forwards;
             animation-duration: 0.5s;
-            &:nth-child(1) {
-                -webkit-animation-delay: 0s;
-                animation-delay: 0s;
-            }     
-            &:nth-child(2) {
-                -webkit-animation-delay: 0s;
-                animation-delay: 0s;
-            }     
-            &:nth-child(3) {
-                -webkit-animation-delay: 0s;
-                animation-delay: 0s;
-            }     
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    -webkit-animation-delay: #{$i*0.5}s;
+                    animation-delay: #{$i*0.5}s;                    
+                }
+
+            }
         }
     }
 }

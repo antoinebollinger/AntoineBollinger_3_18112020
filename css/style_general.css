@@ -278,21 +278,35 @@ main.menu {
             -webkit-animation: rotate .4s;
             animation: rotate .4s; }
 
-main.menu > section > div:nth-child(n + 2), main.menu > section > div > div:nth-child(n + 2) {
+main.menu section > div:nth-child(n + 2) {
+  opacity: 0;
   -webkit-animation-name: fading_entrance;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
   animation-name: fading_entrance;
   animation-timing-function: ease;
-  animation-fill-mode: forwards; }
-
-main.menu > section > div:nth-child(n + 2) {
+  animation-fill-mode: forwards;
   -webkit-animation-duration: 1s;
   animation-duration: 1s; }
-
-main.menu > section > div > div:nth-child(n + 2) {
+main.menu section > div > div:nth-child(n + 2) {
+  opacity: 0;
+  -webkit-animation-name: fading_entrance;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fading_entrance;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s; }
+main.menu section div.entree, main.menu section div.entree > div:nth-child(n + 2) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+main.menu section div.plat, main.menu section div.plat > div:nth-child(n + 2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+main.menu section div.dessert, main.menu section div.dessert > div:nth-child(n + 2) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
 
 /* LOAGING SPINNER */
 div.loading {
@@ -342,14 +356,14 @@ div.loading {
     animation-fill-mode: forwards;
     animation-duration: 0.5s; }
     div.loading h3 span:nth-child(1) {
-      -webkit-animation-delay: 0s;
-      animation-delay: 0s; }
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s; }
     div.loading h3 span:nth-child(2) {
-      -webkit-animation-delay: 0s;
-      animation-delay: 0s; }
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s; }
     div.loading h3 span:nth-child(3) {
-      -webkit-animation-delay: 0s;
-      animation-delay: 0s; }
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s; }
 
 /* FOOTER */
 footer {
@@ -424,21 +438,21 @@ footer {
 @-webkit-keyframes fading_entrance {
   0% {
     opacity: 0;
-    margin-top: 20px; }
+    transform: translatey(25px); }
   50% {
     opacity: 1; }
   100% {
     opacity: 1;
-    margin-top: 0; } }
+    transform: translatey(0); } }
 @keyframes fading_entrance {
   0% {
     opacity: 0;
-    margin-top: 20px; }
+    transform: translatey(25px); }
   50% {
     opacity: 1; }
   100% {
     opacity: 1;
-    margin-top: 0; } }
+    transform: translatey(0); } }
 /* ANIMATION PLATS */
 @-webkit-keyframes rotate {
   0% {
