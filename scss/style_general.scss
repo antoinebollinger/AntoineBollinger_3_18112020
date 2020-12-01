@@ -108,10 +108,11 @@ button {
 
 main {
     margin-top: 80px;
+    box-sizing: border-box;
 }
 /* Localisation */
 
-section.localisation {
+.localisation {
 	height: 50px;
 	background-color: $gris-moyen;
 	i {
@@ -121,7 +122,7 @@ section.localisation {
 
 /* Explorer nos restaurants */
 
-section.presentation {
+.presentation {
 	min-height: 300px;
 	text-align: center;
 	background-color: $gris-clair;
@@ -129,7 +130,7 @@ section.presentation {
 
 /* Fonctionnement */
 
-section.fonctionnement {
+.fonctionnement {
 	align-items: unset;
     background-color: white;
     > div {
@@ -182,7 +183,7 @@ section.fonctionnement {
 
 /* Restaurants */
 
-section.restaurant {
+.restaurant {
 	background-color: $gris-clair;
     align-items: unset;
     > a {
@@ -193,46 +194,47 @@ section.restaurant {
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 5px 10px $gris-normal;
-        div.card__picture {
-            height: 200px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;	     
-        }
-        div.card__text {
-            padding: 5%;
+    }
+}
+
+.card__picture {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;	     
+}
+.card__text {
+    padding: 5%;
+    > div {
+        position: relative;
+        > div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2em;
+            height: 100%;
+            overflow: hidden;
             > div {
-                position: relative;
-                > div {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 2em;
-                    height: 100%;
-                    overflow: hidden;
-                    > div {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        overflow: hidden;
-                        i {
-                            width: 100%;
-                            font-size: 1.8em;
-                            background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                        &:nth-child(1) {
-                            max-width: 0;
-                            -webkit-transition: all 0.4s;
-                            transition: all 0.4s;
-                        }
-                    }
-                    &:hover > div:nth-child(1) {
-                        max-width: 100px;
-                    }
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                i {
+                    width: 100%;
+                    font-size: 1.8em;
+                    background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
+                &:nth-child(1) {
+                    max-width: 0;
+                    -webkit-transition: all 0.4s;
+                    transition: all 0.4s;
+                }
+            }
+            &:hover > div:nth-child(1) {
+                max-width: 100px;
             }
         }
     }
@@ -240,25 +242,25 @@ section.restaurant {
 
 /*  photos des menus */
 
-section.restaurant > a:nth-child(2) div.card__picture, main.menu.palette::before {
+.card__picture.palette, main.menu.palette::before {
 	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
 }
 
-section.restaurant > a:nth-child(3) div.card__picture, main.menu.note::before {
+.card__picture.note, main.menu.note::before {
 	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
 }
 
-section.restaurant > a:nth-child(4) div.card__picture, main.menu.francaise::before {
+.card__picture.francaise, main.menu.francaise::before {
 	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
 }
 
-main section:nth-child(4) > a:nth-child(5) > div:nth-child(1), main.menu.delice::before {
+.card__picture.delice, main.menu.delice::before {
 	background-image: url('../images/restaurants/miniatures/le-delice-des-sens.jpg');
 }
 
 /* MAIN PAGE MENUS */
 
-main.menu {
+.menu {
     padding: 200px 0 0 0;
     &::before {
         content: "";
@@ -273,11 +275,12 @@ main.menu {
         z-index: -1;
     }
     h1 {
+        box-sizing: border-box;
         position:relative;
         padding-right: 1.6em;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
+        margin-bottom: 1.5em;           
+        width: 100%;
+        @include textNoWrap;
         span {
             position: absolute;
             right:0;
@@ -290,80 +293,82 @@ main.menu {
         background-color: $gris-clair;
         border-radius: 40px 40px 0 0;
         padding: 5% 5% 2em 5%;
-        > div {
-            margin-bottom: 1.5em;           
-            width: 100%;
-            > p {
-                position: relative;
-                text-transform: uppercase;
-                padding-bottom: 0.5em;
-                margin-bottom: 1em;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left:0;
-                    bottom:0;
-                    height:3px;
-                    width:50px;
-                    background-color: $color-tertiary;
-                }
+    }
+    article {
+        margin-bottom: 1.5em;           
+        width: 100%;
+        > h2 {
+            position: relative;
+            text-transform: uppercase;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            font-weight: normal;
+            &::before {
+                content: "";
+                position: absolute;
+                left:0;
+                bottom:0;
+                height:3px;
+                width:50px;
+                background-color: $color-tertiary;
             }
-            > div {
-                box-sizing: border-box;
-                height:60px;
-                padding: 0 0 0 5%;
-                margin-bottom: 1em;
-                border-radius: 15px;
-                display: flex;
-                overflow: hidden;
-                align-items: center;
-                background-color: white;
-                box-shadow: 0 5px 10px $gris-normal;
-                cursor: pointer;
-                > div {
-                    &:nth-child(1) {
-                        flex: 1 1 auto;
-                        min-width: 0;
-                        p, h3 {
-                            line-height: 25px;
-                            @include textNoWrap;
-                        }
-                    }
-                    &:nth-child(2) {
-                        width: 70px;
-                        flex: 0 0 auto;
-                        text-align: center;
-                        p {
-                            font-weight: bold;
-                            line-height: 25px;
-                        }
-                    }
-                    &:nth-child(3) {
-                        width: 60px;
-                        flex: 0 0 auto;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        max-width: 0;
-                        height: 100%;
-                        color: white;
-                        background-color: $color-tertiary;
-                        -webkit-transition: all 0.4s;
-                        transition: all 0.4s;
-                        i {
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-                &:hover {
-                    > div:nth-child(3) {
-                        max-width: 60px;
-                        i {
-                            -webkit-animation: rotate .4s;
-                            animation: rotate .4s;                           
-                        }
-                    }
-                }
+        }
+    }
+}
+
+.plat {
+    box-sizing: border-box;
+    height:60px;
+    padding: 0 0 0 5%;
+    margin-bottom: 1em;
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 5px 10px $gris-normal;
+    cursor: pointer;
+    > div {
+        &:nth-child(1) {
+            flex: 1 1 auto;
+            min-width: 0;
+            p, h3 {
+                line-height: 25px;
+                @include textNoWrap;
+            }
+        }
+        &:nth-child(2) {
+            width: 70px;
+            flex: 0 0 auto;
+            text-align: center;
+            p {
+                font-weight: bold;
+                line-height: 25px;
+            }
+        }
+        &:nth-child(3) {
+            width: 60px;
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 0;
+            height: 100%;
+            color: white;
+            background-color: $color-tertiary;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+            i {
+                font-size: 1.5em;
+            }
+        }
+    }
+    &:hover {
+        > div:nth-child(3) {
+            max-width: 60px;
+            i {
+                -webkit-animation: rotate .4s;
+                animation: rotate .4s;                           
             }
         }
     }
@@ -379,20 +384,20 @@ main.menu {
     animation-fill-mode: forwards;
 }
 
-$var: entree, plat, dessert; $i: 0;
-main.menu section {
-    > div:nth-child(n + 2) {
+$var: entrees, plats, desserts; $i: 0;
+main.menu {
+    article {
         @include fading;
         -webkit-animation-duration: 1s;
         animation-duration: 1s;	   
     }
-    > div > div:nth-child(n + 2) {
+    .plat {
         @include fading;
         -webkit-animation-duration: 2s;
         animation-duration: 2s; 
     }
     @each $key in $var {
-        div.#{$key}, div.#{$key} > div:nth-child(n + 2) {
+        article.#{$key}, article.#{$key} .plat {
             -webkit-animation-delay: #{$i*0.5}s;
             animation-delay: #{$i*0.5}s;    
         }
@@ -403,7 +408,7 @@ main.menu section {
 
 /* LOAGING SPINNER */ 
 
-div.loading {
+.loading {
 	position: fixed;
 	display:flex;
 	justify-content: center;

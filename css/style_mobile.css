@@ -30,10 +30,4 @@ header {
     header nav > a:nth-child(2) i {
       font-size: 1.4em; }
 
-/* MAIN PAGE ACCUEIL */
-main.accueil {
-  box-sizing: border-box;
-  min-height: 100vh;
-  margin: 80px 0 0 0; }
-
 /*# sourceMappingURL=style_mobile.css.map */

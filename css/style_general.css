@@ -70,26 +70,27 @@ button {
 
 /* MAIN */
 main {
-  margin-top: 80px; }
+  margin-top: 80px;
+  box-sizing: border-box; }
 
 /* Localisation */
-section.localisation {
+.localisation {
   height: 50px;
   background-color: #eaeaea; }
-  section.localisation i {
+  .localisation i {
     margin-right: 0.5em; }
 
 /* Explorer nos restaurants */
-section.presentation {
+.presentation {
   min-height: 300px;
   text-align: center;
   background-color: #f6f6f6; }
 
 /* Fonctionnement */
-section.fonctionnement {
+.fonctionnement {
   align-items: unset;
   background-color: white; }
-  section.fonctionnement > div {
+  .fonctionnement > div {
     position: relative;
     box-sizing: border-box;
     padding: 0 0 0 15px;
@@ -97,7 +98,7 @@ section.fonctionnement {
     width: 100%;
     height: 80px;
     cursor: pointer; }
-    section.fonctionnement > div > div:nth-child(1) {
+    .fonctionnement > div > div:nth-child(1) {
       display: flex;
       align-items: center;
       height: 100%;
@@ -107,11 +108,11 @@ section.fonctionnement {
       box-shadow: 0 5px 10px #C0C0C0;
       -webkit-transition: all 0.4s;
       transition: all 0.4s; }
-      section.fonctionnement > div > div:nth-child(1) i {
+      .fonctionnement > div > div:nth-child(1) i {
         margin-right: 0.5em;
         -webkit-transition: all 0.4s;
         transition: all 0.4s; }
-    section.fonctionnement > div > div:nth-child(2) {
+    .fonctionnement > div > div:nth-child(2) {
       position: absolute;
       display: flex;
       align-items: center;
@@ -123,16 +124,16 @@ section.fonctionnement {
       border-radius: 50%;
       background-color: #9356DC;
       color: white; }
-    section.fonctionnement > div:hover > div:nth-child(1) {
+    .fonctionnement > div:hover > div:nth-child(1) {
       background-color: rgba(147, 86, 220, 0.2); }
-    section.fonctionnement > div:hover i {
+    .fonctionnement > div:hover i {
       color: #9356DC; }
 
 /* Restaurants */
-section.restaurant {
+.restaurant {
   background-color: #f6f6f6;
   align-items: unset; }
-  section.restaurant > a {
+  .restaurant > a {
     box-sizing: border-box;
     min-height: 200px;
     margin: 5% 0;
@@ -140,58 +141,60 @@ section.restaurant {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 10px #C0C0C0; }
-    section.restaurant > a div.card__picture {
-      height: 200px;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    section.restaurant > a div.card__text {
-      padding: 5%; }
-      section.restaurant > a div.card__text > div {
-        position: relative; }
-        section.restaurant > a div.card__text > div > div {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 2em;
-          height: 100%;
-          overflow: hidden; }
-          section.restaurant > a div.card__text > div > div > div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden; }
-            section.restaurant > a div.card__text > div > div > div i {
-              width: 100%;
-              font-size: 1.8em;
-              background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent; }
-            section.restaurant > a div.card__text > div > div > div:nth-child(1) {
-              max-width: 0;
-              -webkit-transition: all 0.4s;
-              transition: all 0.4s; }
-          section.restaurant > a div.card__text > div > div:hover > div:nth-child(1) {
-            max-width: 100px; }
+
+.card__picture {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.card__text {
+  padding: 5%; }
+  .card__text > div {
+    position: relative; }
+    .card__text > div > div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2em;
+      height: 100%;
+      overflow: hidden; }
+      .card__text > div > div > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden; }
+        .card__text > div > div > div i {
+          width: 100%;
+          font-size: 1.8em;
+          background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+        .card__text > div > div > div:nth-child(1) {
+          max-width: 0;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s; }
+      .card__text > div > div:hover > div:nth-child(1) {
+        max-width: 100px; }
 
 /*  photos des menus */
-section.restaurant > a:nth-child(2) div.card__picture, main.menu.palette::before {
+.card__picture.palette, main.menu.palette::before {
   background-image: url("../images/restaurants/miniatures/la-palette-du-gout.jpg"); }
 
-section.restaurant > a:nth-child(3) div.card__picture, main.menu.note::before {
+.card__picture.note, main.menu.note::before {
   background-image: url("../images/restaurants/miniatures/la-note-enchantee.jpg"); }
 
-section.restaurant > a:nth-child(4) div.card__picture, main.menu.francaise::before {
+.card__picture.francaise, main.menu.francaise::before {
   background-image: url("../images/restaurants/miniatures/a-la-francaise.jpg"); }
 
-main section:nth-child(4) > a:nth-child(5) > div:nth-child(1), main.menu.delice::before {
+.card__picture.delice, main.menu.delice::before {
   background-image: url("../images/restaurants/miniatures/le-delice-des-sens.jpg"); }
 
 /* MAIN PAGE MENUS */
-main.menu {
+.menu {
   padding: 200px 0 0 0; }
-  main.menu::before {
+  .menu::before {
     content: "";
     position: absolute;
     top: 80px;
@@ -202,86 +205,91 @@ main.menu {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1; }
-  main.menu h1 {
+  .menu h1 {
+    box-sizing: border-box;
     position: relative;
     padding-right: 1.6em;
+    margin-bottom: 1.5em;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-    main.menu h1 span {
+    .menu h1 span {
       position: absolute;
       right: 0; }
-  main.menu section {
+  .menu section {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f6f6f6;
     border-radius: 40px 40px 0 0;
     padding: 5% 5% 2em 5%; }
-    main.menu section > div {
-      margin-bottom: 1.5em;
-      width: 100%; }
-      main.menu section > div > p {
-        position: relative;
-        text-transform: uppercase;
-        padding-bottom: 0.5em;
-        margin-bottom: 1em; }
-        main.menu section > div > p::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 3px;
-          width: 50px;
-          background-color: #99E2D0; }
-      main.menu section > div > div {
-        box-sizing: border-box;
-        height: 60px;
-        padding: 0 0 0 5%;
-        margin-bottom: 1em;
-        border-radius: 15px;
-        display: flex;
-        overflow: hidden;
-        align-items: center;
-        background-color: white;
-        box-shadow: 0 5px 10px #C0C0C0;
-        cursor: pointer; }
-        main.menu section > div > div > div:nth-child(1) {
-          flex: 1 1 auto;
-          min-width: 0; }
-          main.menu section > div > div > div:nth-child(1) p, main.menu section > div > div > div:nth-child(1) h3 {
-            line-height: 25px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis; }
-        main.menu section > div > div > div:nth-child(2) {
-          width: 70px;
-          flex: 0 0 auto;
-          text-align: center; }
-          main.menu section > div > div > div:nth-child(2) p {
-            font-weight: bold;
-            line-height: 25px; }
-        main.menu section > div > div > div:nth-child(3) {
-          width: 60px;
-          flex: 0 0 auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          max-width: 0;
-          height: 100%;
-          color: white;
-          background-color: #99E2D0;
-          -webkit-transition: all 0.4s;
-          transition: all 0.4s; }
-          main.menu section > div > div > div:nth-child(3) i {
-            font-size: 1.5em; }
-        main.menu section > div > div:hover > div:nth-child(3) {
-          max-width: 60px; }
-          main.menu section > div > div:hover > div:nth-child(3) i {
-            -webkit-animation: rotate .4s;
-            animation: rotate .4s; }
+  .menu article {
+    margin-bottom: 1.5em;
+    width: 100%; }
+    .menu article > h2 {
+      position: relative;
+      text-transform: uppercase;
+      padding-bottom: 0.5em;
+      margin-bottom: 1em;
+      font-weight: normal; }
+      .menu article > h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 50px;
+        background-color: #99E2D0; }
 
-main.menu section > div:nth-child(n + 2) {
+.plat {
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 0 0 5%;
+  margin-bottom: 1em;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 5px 10px #C0C0C0;
+  cursor: pointer; }
+  .plat > div:nth-child(1) {
+    flex: 1 1 auto;
+    min-width: 0; }
+    .plat > div:nth-child(1) p, .plat > div:nth-child(1) h3 {
+      line-height: 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .plat > div:nth-child(2) {
+    width: 70px;
+    flex: 0 0 auto;
+    text-align: center; }
+    .plat > div:nth-child(2) p {
+      font-weight: bold;
+      line-height: 25px; }
+  .plat > div:nth-child(3) {
+    width: 60px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 0;
+    height: 100%;
+    color: white;
+    background-color: #99E2D0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s; }
+    .plat > div:nth-child(3) i {
+      font-size: 1.5em; }
+  .plat:hover > div:nth-child(3) {
+    max-width: 60px; }
+    .plat:hover > div:nth-child(3) i {
+      -webkit-animation: rotate .4s;
+      animation: rotate .4s; }
+
+main.menu article {
   opacity: 0;
   -webkit-animation-name: fading_entrance;
   -webkit-animation-timing-function: ease;
@@ -291,7 +299,7 @@ main.menu section > div:nth-child(n + 2) {
   animation-fill-mode: forwards;
   -webkit-animation-duration: 1s;
   animation-duration: 1s; }
-main.menu section > div > div:nth-child(n + 2) {
+main.menu .plat {
   opacity: 0;
   -webkit-animation-name: fading_entrance;
   -webkit-animation-timing-function: ease;
@@ -301,18 +309,18 @@ main.menu section > div > div:nth-child(n + 2) {
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s; }
-main.menu section div.entree, main.menu section div.entree > div:nth-child(n + 2) {
+main.menu article.entrees, main.menu article.entrees .plat {
   -webkit-animation-delay: 0s;
   animation-delay: 0s; }
-main.menu section div.plat, main.menu section div.plat > div:nth-child(n + 2) {
+main.menu article.plats, main.menu article.plats .plat {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s; }
-main.menu section div.dessert, main.menu section div.dessert > div:nth-child(n + 2) {
+main.menu article.desserts, main.menu article.desserts .plat {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
 /* LOAGING SPINNER */
-div.loading {
+.loading {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -335,7 +343,7 @@ div.loading {
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   animation-delay: 1.5s; }
-  div.loading i {
+  .loading i {
     font-size: 3em;
     margin-bottom: 1em;
     -webkit-animation-name: beating;
@@ -348,7 +356,7 @@ div.loading {
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-duration: 0.4s; }
-  div.loading h3 span {
+  .loading h3 span {
     opacity: 0;
     -webkit-animation-name: trois_points;
     -webkit-animation-timing-function: ease;
@@ -358,13 +366,13 @@ div.loading {
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-duration: 0.5s; }
-    div.loading h3 span:nth-child(1) {
+    .loading h3 span:nth-child(1) {
       -webkit-animation-delay: 0.5s;
       animation-delay: 0.5s; }
-    div.loading h3 span:nth-child(2) {
+    .loading h3 span:nth-child(2) {
       -webkit-animation-delay: 1s;
       animation-delay: 1s; }
-    div.loading h3 span:nth-child(3) {
+    .loading h3 span:nth-child(3) {
       -webkit-animation-delay: 1.5s;
       animation-delay: 1.5s; }
 
