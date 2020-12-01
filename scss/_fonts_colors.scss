@@ -1,0 +1,19 @@
+$color-primary: #9356DC;
+@function color-primary--opacity($o) {
+    @return rgba(147,86,220,$o);
+}
+$color-secondary: #FF79DA;
+@function color-secondary--opacity($o) {
+    @return rgba(255,121,218,$o);
+}
+$color-tertiary: #99E2D0;
+$gris-clair: #f6f6f6;
+$gris-moyen: #eaeaea;
+$gris-normal: #C0C0C0;
+$gris-fonce: #353535;
+
+@mixin textNoWrap {
+    white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}

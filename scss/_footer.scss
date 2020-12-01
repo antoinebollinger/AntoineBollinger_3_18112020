@@ -1,0 +1,20 @@
+footer {
+	position: relative; padding: 5%;
+	background-color: $gris-fonce;
+	color: white;
+	p {
+		margin-bottom: 0.6em;
+    }
+    > p {
+        font-family: 'Shrikhand', cursive;
+        margin-bottom: 1em;
+    }
+	i {
+		width:1.6em;
+	}
+	a {
+		&:hover {
+			color: $color-tertiary;
+		}
+	}
+}

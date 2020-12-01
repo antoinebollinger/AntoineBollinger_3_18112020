@@ -3,25 +3,7 @@
 
 /* FONTS & COLORS */
 
-$color-primary: #9356DC;
-@function color-primary--opacity($o) {
-    @return rgba(147,86,220,$o);
-}
-$color-secondary: #FF79DA;
-@function color-secondary--opacity($o) {
-    @return rgba(255,121,218,$o);
-}
-$color-tertiary: #99E2D0;
-$gris-clair: #f6f6f6;
-$gris-moyen: #eaeaea;
-$gris-normal: #C0C0C0;
-$gris-fonce: #353535;
-
-@mixin textNoWrap {
-    white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
+@import '_fonts_colors.scss';
 
 /* GENERALITES */
 
@@ -37,6 +19,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 }
 
 /* General */
+
 html, body {
 	width:100%;
 	height:100%;
@@ -45,6 +28,11 @@ html, body {
 
 body {
 	background-color: $gris-fonce;
+}
+
+main {
+    margin-top: 80px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -74,6 +62,11 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+li {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;  
+}
 a {
 	text-decoration:none;
     color:inherit;
@@ -83,413 +76,24 @@ a {
 
 /* BOUTONS */
 
-button {
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 10%;
-    box-shadow: 0 5px 10px $gris-normal;
-    border-radius: 25px;
-    border: none;
-    font: normal 1em 'Roboto', sans-serif;
-    text-align: center;
-    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
-    color: white;
-    cursor: pointer;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-	&:hover {
-        box-shadow: 0 4px 5px $gris-normal;
-        filter: brightness(1.1);
-	}
-}
+@import '_buttons.scss';
 
-/* MAIN */
+/* HOME */
 
-main {
-    margin-top: 80px;
-    box-sizing: border-box;
-}
-/* Localisation */
+@import '_main_home.scss';
 
-.localisation {
-	height: 50px;
-	background-color: $gris-moyen;
-	i {
-		margin-right: 0.5em;
-	}
-}
+/* MENUS */
 
-/* Explorer nos restaurants */
-
-.presentation {
-	min-height: 300px;
-	text-align: center;
-	background-color: $gris-clair;
-}
-
-/* Fonctionnement */
-
-.fonctionnement {
-	align-items: unset;
-    background-color: white;
-    > div {
-        position: relative;
-        box-sizing: border-box;
-        padding: 0 0 0 15px;
-        margin: 5% 0;
-        width: 100%;
-        height: 80px;
-        cursor: pointer;
-        > div:nth-child(1) {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            padding: 0 5% 0 30px;
-            border-radius: 20px;
-            background-color: $gris-clair;
-            box-shadow: 0 5px 10px $gris-normal;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            i {
-                margin-right: 0.5em;
-                -webkit-transition: all 0.4s;
-                transition: all 0.4s;
-            }
-        }
-        > div:nth-child(2) {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 25px;
-            left: 0;
-            width:30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: white;
-        }
-        &:hover {
-            > div:nth-child(1) {
-                background-color: color-primary--opacity(0.2);
-            }
-            i {
-                color: $color-primary; 
-            }
-        }
-    }
-}
-
-/* Restaurants */
-
-.restaurant {
-	background-color: $gris-clair;
-    align-items: unset;
-    > a {
-        box-sizing: border-box;
-        min-height: 200px;
-        margin: 5% 0;
-        background-color: white;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 5px 10px $gris-normal;
-    }
-}
-
-.card__picture {
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;	     
-}
-.card__text {
-    padding: 5%;
-    > div {
-        position: relative;
-        > div {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 2em;
-            height: 100%;
-            overflow: hidden;
-            > div {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                overflow: hidden;
-                i {
-                    width: 100%;
-                    font-size: 1.8em;
-                    background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                &:nth-child(1) {
-                    max-width: 0;
-                    -webkit-transition: all 0.4s;
-                    transition: all 0.4s;
-                }
-            }
-            &:hover > div:nth-child(1) {
-                max-width: 100px;
-            }
-        }
-    }
-}
-
-/*  photos des menus */
-
-.card__picture.palette, main.menu.palette::before {
-	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
-}
-
-.card__picture.note, main.menu.note::before {
-	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
-}
-
-.card__picture.francaise, main.menu.francaise::before {
-	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
-}
-
-.card__picture.delice, main.menu.delice::before {
-	background-image: url('../images/restaurants/miniatures/le-delice-des-sens.jpg');
-}
-
-/* MAIN PAGE MENUS */
-
-.menu {
-    padding: 200px 0 0 0;
-    &::before {
-        content: "";
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        height: 240px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: -1;
-    }
-    h1 {
-        box-sizing: border-box;
-        position:relative;
-        padding-right: 1.6em;
-        margin-bottom: 1.5em;           
-        width: 100%;
-        @include textNoWrap;
-        span {
-            position: absolute;
-            right:0;
-        }
-    }
-    section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $gris-clair;
-        border-radius: 40px 40px 0 0;
-        padding: 5% 5% 2em 5%;
-    }
-    article {
-        margin-bottom: 1.5em;           
-        width: 100%;
-        > h2 {
-            position: relative;
-            text-transform: uppercase;
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-            font-weight: normal;
-            &::before {
-                content: "";
-                position: absolute;
-                left:0;
-                bottom:0;
-                height:3px;
-                width:50px;
-                background-color: $color-tertiary;
-            }
-        }
-    }
-}
-
-.plat {
-    box-sizing: border-box;
-    height:60px;
-    padding: 0 0 0 5%;
-    margin-bottom: 1em;
-    border-radius: 15px;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 5px 10px $gris-normal;
-    cursor: pointer;
-    > div {
-        &:nth-child(1) {
-            flex: 1 1 auto;
-            min-width: 0;
-            p, h3 {
-                line-height: 25px;
-                @include textNoWrap;
-            }
-        }
-        &:nth-child(2) {
-            width: 70px;
-            flex: 0 0 auto;
-            text-align: center;
-            p {
-                font-weight: bold;
-                line-height: 25px;
-            }
-        }
-        &:nth-child(3) {
-            width: 60px;
-            flex: 0 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 0;
-            height: 100%;
-            color: white;
-            background-color: $color-tertiary;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            i {
-                font-size: 1.5em;
-            }
-        }
-    }
-    &:hover {
-        > div:nth-child(3) {
-            max-width: 60px;
-            i {
-                -webkit-animation: rotate .4s;
-                animation: rotate .4s;                           
-            }
-        }
-    }
-}
-
-@mixin fading {
-    opacity: 0;
-    -webkit-animation-name: fading_entrance;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    animation-name: fading_entrance;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-$var: entrees, plats, desserts; $i: 0;
-main.menu {
-    article {
-        @include fading;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;	   
-    }
-    .plat {
-        @include fading;
-        -webkit-animation-duration: 2s;
-        animation-duration: 2s; 
-    }
-    @each $key in $var {
-        article.#{$key}, article.#{$key} .plat {
-            -webkit-animation-delay: #{$i*0.5}s;
-            animation-delay: #{$i*0.5}s;    
-        }
-        $i: $i + 1;
-    }
-
-}
+@import '_main_menu.scss';
 
 /* LOAGING SPINNER */ 
 
-.loading {
-	position: fixed;
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 1000;
-	background-color: rgba(0,0,0,0.5);
-	color: $color-tertiary;
-	-webkit-animation-name: loading;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-	-webkit-animation-duration: 0.5s;	
-	-webkit-animation-delay: 1.5s;
-    animation-name: loading;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;	
-	animation-duration: 0.5s;
-    animation-delay: 1.5s;
-    i {
-        font-size: 3em;
-        margin-bottom: 1em;
-        -webkit-animation-name: beating;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-duration: 0.4s;	
-        animation-name: beating;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;	
-        animation-iteration-count: infinite;
-        animation-duration: 0.4s;
-    }
-    h3 {
-        span {
-            opacity: 0;
-            -webkit-animation-name: trois_points;
-            -webkit-animation-timing-function: ease;
-            -webkit-animation-fill-mode: forwards;
-            -webkit-animation-duration: 0.5s;
-            animation-name: trois_points;
-            animation-timing-function: ease;
-            animation-fill-mode: forwards;
-            animation-duration: 0.5s;
-            @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
-                    -webkit-animation-delay: #{$i*0.5}s;
-                    animation-delay: #{$i*0.5}s;                    
-                }
-
-            }
-        }
-    }
-}
+@import '_loading.scss';
 
 /* FOOTER */
 
-footer {
-	position: relative; padding: 5%;
-	background-color: $gris-fonce;
-	color: white;
-	p {
-		margin-bottom: 0.6em;
-    }
-    > p {
-        font-family: 'Shrikhand', cursive;
-        margin-bottom: 1em;
-    }
-	i {
-		width:1.6em;
-	}
-	a {
-		&:hover {
-			color: $color-tertiary;
-		}
-	}
-}
+@import '_footer.scss';
 
 /* KEY-FRAMES */
 
-@import 'animation.scss';
+@import '_animation.scss';

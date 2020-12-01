@@ -20,6 +20,10 @@ html, body {
 body {
   background-color: #353535; }
 
+main {
+  margin-top: 80px;
+  box-sizing: border-box; }
+
 h1 {
   font-size: 1.6em;
   font-weight: bold; }
@@ -41,6 +45,11 @@ h2, h3, p, a {
 p {
   font-size: 1em;
   font-family: 'Roboto', sans-serif; }
+
+li {
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
 
 a {
   text-decoration: none;
@@ -68,11 +77,7 @@ button {
     box-shadow: 0 4px 5px #C0C0C0;
     filter: brightness(1.1); }
 
-/* MAIN */
-main {
-  margin-top: 80px;
-  box-sizing: border-box; }
-
+/* HOME */
 /* Localisation */
 .localisation {
   height: 50px;
@@ -90,7 +95,7 @@ main {
 .fonctionnement {
   align-items: unset;
   background-color: white; }
-  .fonctionnement > div {
+  .fonctionnement > article {
     position: relative;
     box-sizing: border-box;
     padding: 0 0 0 15px;
@@ -98,7 +103,7 @@ main {
     width: 100%;
     height: 80px;
     cursor: pointer; }
-    .fonctionnement > div > div:nth-child(1) {
+    .fonctionnement > article > div:nth-child(1) {
       display: flex;
       align-items: center;
       height: 100%;
@@ -108,11 +113,11 @@ main {
       box-shadow: 0 5px 10px #C0C0C0;
       -webkit-transition: all 0.4s;
       transition: all 0.4s; }
-      .fonctionnement > div > div:nth-child(1) i {
+      .fonctionnement > article > div:nth-child(1) i {
         margin-right: 0.5em;
         -webkit-transition: all 0.4s;
         transition: all 0.4s; }
-    .fonctionnement > div > div:nth-child(2) {
+    .fonctionnement > article > div:nth-child(2) {
       position: absolute;
       display: flex;
       align-items: center;
@@ -124,9 +129,9 @@ main {
       border-radius: 50%;
       background-color: #9356DC;
       color: white; }
-    .fonctionnement > div:hover > div:nth-child(1) {
+    .fonctionnement > article:hover > div:nth-child(1) {
       background-color: rgba(147, 86, 220, 0.2); }
-    .fonctionnement > div:hover i {
+    .fonctionnement > article:hover i {
       color: #9356DC; }
 
 /* Restaurants */
@@ -149,34 +154,33 @@ main {
   background-repeat: no-repeat; }
 
 .card__text {
-  padding: 5%; }
+  margin: 5%;
+  position: relative; }
   .card__text > div {
-    position: relative; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 100%;
+    overflow: hidden; }
     .card__text > div > div {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 2em;
-      height: 100%;
+      left: 0;
+      width: 100%;
       overflow: hidden; }
-      .card__text > div > div > div {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .card__text > div > div i {
         width: 100%;
-        overflow: hidden; }
-        .card__text > div > div > div i {
-          width: 100%;
-          font-size: 1.8em;
-          background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent; }
-        .card__text > div > div > div:nth-child(1) {
-          max-width: 0;
-          -webkit-transition: all 0.4s;
-          transition: all 0.4s; }
-      .card__text > div > div:hover > div:nth-child(1) {
-        max-width: 100px; }
+        font-size: 1.8em;
+        background: -webkit-linear-gradient(#9356dc 0%, #ff79da 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      .card__text > div > div:nth-child(1) {
+        max-width: 0;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s; }
+    .card__text > div:hover > div:nth-child(1) {
+      max-width: 100px; }
 
 /*  photos des menus */
 .card__picture.palette, main.menu.palette::before {
@@ -191,7 +195,7 @@ main {
 .card__picture.delice, main.menu.delice::before {
   background-image: url("../images/restaurants/miniatures/le-delice-des-sens.jpg"); }
 
-/* MAIN PAGE MENUS */
+/* MENUS */
 .menu {
   padding: 200px 0 0 0; }
   .menu::before {
@@ -254,38 +258,39 @@ main {
   background-color: white;
   box-shadow: 0 5px 10px #C0C0C0;
   cursor: pointer; }
-  .plat > div:nth-child(1) {
-    flex: 1 1 auto;
-    min-width: 0; }
-    .plat > div:nth-child(1) p, .plat > div:nth-child(1) h3 {
-      line-height: 25px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-  .plat > div:nth-child(2) {
-    width: 70px;
-    flex: 0 0 auto;
-    text-align: center; }
-    .plat > div:nth-child(2) p {
-      font-weight: bold;
-      line-height: 25px; }
-  .plat > div:nth-child(3) {
-    width: 60px;
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 0;
-    height: 100%;
-    color: white;
-    background-color: #99E2D0;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s; }
-    .plat > div:nth-child(3) i {
-      font-size: 1.5em; }
-  .plat:hover > div:nth-child(3) {
+  .plat li {
+    line-height: 25px;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .plat li span {
+      font-weight: normal;
+      font-size: 0.8em; }
+    .plat li:nth-child(1) {
+      flex: 1 1 auto;
+      min-width: 0; }
+    .plat li:nth-child(2) {
+      width: 70px;
+      flex: 0 0 auto;
+      text-align: center; }
+    .plat li:nth-child(3) {
+      width: 60px;
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 0;
+      height: 100%;
+      color: white;
+      background-color: #99E2D0;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s; }
+      .plat li:nth-child(3) i {
+        font-size: 1.5em; }
+  .plat:hover > li:nth-child(3) {
     max-width: 60px; }
-    .plat:hover > div:nth-child(3) i {
+    .plat:hover > li:nth-child(3) i {
       -webkit-animation: rotate .4s;
       animation: rotate .4s; }
 
@@ -393,7 +398,7 @@ footer {
     color: #99E2D0; }
 
 /* KEY-FRAMES */
-/* ANIMATION LOADING PAGE */
+/* Loading page animation */
 @-webkit-keyframes loading {
   0% {
     opacity: 1;
@@ -445,7 +450,7 @@ footer {
     opacity: 0; }
   100% {
     opacity: 1; } }
-/* ANIMATION ARRIVEE PAGE MENU*/
+/* Menu pages loading animation */
 @-webkit-keyframes fading_entrance {
   0% {
     opacity: 0;

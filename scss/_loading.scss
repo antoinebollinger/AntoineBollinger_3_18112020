@@ -1,0 +1,58 @@
+.loading {
+	position: fixed;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.5);
+	color: $color-tertiary;
+	-webkit-animation-name: loading;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+	-webkit-animation-duration: 0.5s;	
+	-webkit-animation-delay: 1.5s;
+    animation-name: loading;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;	
+	animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    i {
+        font-size: 3em;
+        margin-bottom: 1em;
+        -webkit-animation-name: beating;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 0.4s;	
+        animation-name: beating;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;	
+        animation-iteration-count: infinite;
+        animation-duration: 0.4s;
+    }
+    h3 {
+        span {
+            opacity: 0;
+            -webkit-animation-name: trois_points;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-duration: 0.5s;
+            animation-name: trois_points;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-duration: 0.5s;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    -webkit-animation-delay: #{$i*0.5}s;
+                    animation-delay: #{$i*0.5}s;                    
+                }
+
+            }
+        }
+    }
+}
