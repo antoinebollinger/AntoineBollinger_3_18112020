@@ -74,7 +74,7 @@
 .restaurant {
 	background-color: $gris-clair;
     align-items: unset;
-    > a {
+    .card {
         box-sizing: border-box;
         min-height: 200px;
         margin: 5% 0;

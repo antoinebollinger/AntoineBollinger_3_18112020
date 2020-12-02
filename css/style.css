@@ -139,7 +139,7 @@ button {
 .restaurant {
   background-color: #f6f6f6;
   align-items: unset; }
-  .restaurant > a {
+  .restaurant .card {
     box-sizing: border-box;
     min-height: 200px;
     margin: 5% 0;
