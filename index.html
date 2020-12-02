@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style_general.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/style_mobile.css" media="screen and (max-width: 700px)" />		
 		<link rel="stylesheet" type="text/css" href="css/style_desktop.css" media="screen and (min-width: 701px)" />
 		<script src="https://kit.fontawesome.com/63124842e5.js" crossorigin="anonymous"></script>
@@ -33,83 +33,67 @@
              <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
                 <article>
-                    <div><h3><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</h3></div>
-                    <div><p>1</p></div>
+                    <h3><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</h3>
+                    <p>1</p>
                 </article>
                 <article>
-                    <div><h3><i class="fas fa-list-ul"></i>Composez votre menu</h3></div>
-                    <div><p>2</p></div>
+                    <h3><i class="fas fa-list-ul"></i>Composez votre menu</h3>
+                    <p>2</p>
                 </article>
                 <article>
-                    <div><h3><i class="fas fa-store"></i>Dégustez au restaurant</h3></div>
-                    <div><p>3</p></div>
+                    <h3><i class="fas fa-store"></i>Dégustez au restaurant</h3>
+                    <p>3</p>
                 </article>
             </section>
             <section class="restaurant">
                 <h2>Restaurants</h2>
                 <a href="la-palette-du-gout.html" title="Réservez votre menu dans le restaurant La palette du goût">
                     <div class="card__picture palette"></div>
-                    <div class="card__text">
-                        <div>
-                            <div>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <i class="far fa-heart"></i>
-                                </div>
-                        </div>
+                    <article class="card__text">
                         <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                     </div>
+                        <h4>Ménilmontant</h4>
+                        <p class="jaime">
+                            <span><i class="fas fa-heart"></i></span>
+                            <span><i class="far fa-heart"></i></span>
+                        </p>
+                    </article>
                 </a>
                 <a href="la-note-enchantee.html" title="Réservez votre menu dans le restaurant La note enchantée">
                     <div class="card__picture note"></div>
-                    <div class="card__text">
-                        <div>
-                            <div>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
+                    <article class="card__text">
                         <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                        </div>
+                        <h4>Charonne</h4>
+                        <p class="jaime">
+                            <span><i class="fas fa-heart"></i></span>
+                            <span><i class="far fa-heart"></i></span>
+                        </p>
+                    </article>
                 </a>
                 <a href="a-la-francaise.html" title="Réservez votre menu dans le restaurant À la française">
                     <div class="card__picture francaise"></div>
-                    <div class="card__text">
-                        <div>
-                            <div>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <i class="far fa-heart"></i>
-                                </div>
-                        </div>
+                    <article class="card__text">
                         <h3>À la française</h3>
-                        <p>Cité Rouge</p>
-                    </div>
+                        <h4>Cité Rouge</h4>
+                        <p class="jaime">
+                            <span><i class="fas fa-heart"></i></span>
+                            <span><i class="far fa-heart"></i></span>
+                        </p>
+                    </article>
                 </a>
                 <a href="le-delice-des-sens.html" title="Réservez votre menu dans le restaurant Le délice des sens">
                     <div class="card__picture delice"></div>
-                    <div class="card__text">
-                        <div>
-                            <div>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <i class="far fa-heart"></i>
-                                </div>
-                        </div>
+                    <article class="card__text">
                         <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                     </div>
+                        <h4>Folie-Méricourt</h4>
+                        <p class="jaime">
+                            <span><i class="fas fa-heart"></i></span>
+                            <span><i class="far fa-heart"></i></span>
+                        </p>
+                    </article>
                 </a>
              </section>
         </main>
-		<article class="loading"><i class="fas fa-utensils"></i><h3>Chargement<span>.</span><span>.</span><span>.</span></h3></article>
+		<section class="loading"><i class="fas fa-utensils"></i><h3>Chargement<span>.</span><span>.</span><span>.</span></h3></section>
         <footer>
             <p>ohmyfood</p>
             <a href="#"><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></a>

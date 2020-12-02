@@ -21,7 +21,7 @@
 .fonctionnement {
 	align-items: unset;
     background-color: white;
-    > article {
+    article {
         position: relative;
         box-sizing: border-box;
         padding: 0 0 0 15px;
@@ -29,7 +29,7 @@
         width: 100%;
         height: 80px;
         cursor: pointer;
-        > div:nth-child(1) {
+        h3 {
             display: flex;
             align-items: center;
             height: 100%;
@@ -45,7 +45,7 @@
                 transition: all 0.4s;
             }
         }
-        > div:nth-child(2) {
+        p {
             position: absolute;
             display: flex;
             align-items: center;
@@ -59,7 +59,7 @@
             color: white;
         }
         &:hover {
-            > div:nth-child(1) {
+            h3 {
                 background-color: color-primary--opacity(0.2);
             }
             i {
@@ -94,14 +94,14 @@
 .card__text {
     margin: 5%;
     position: relative;        
-    > div {
+    p {
         position: absolute;
         top: 0;
         right: 0;
         width: 2em;
         height: 100%;
         overflow: hidden;
-        > div {
+        span {
             position: absolute;
             top: 0;
             left: 0;
@@ -120,7 +120,7 @@
                 transition: all 0.4s;
             }
         }
-        &:hover > div:nth-child(1) {
+        &:hover > span:nth-child(1) {
             max-width: 100px;
         }
     }
@@ -128,18 +128,18 @@
 
 /*  photos des menus */
 
-.card__picture.palette, main.menu.palette::before {
+.card__picture.palette, .menu.palette::before {
 	background-image: url('../images/restaurants/miniatures/la-palette-du-gout.jpg');
 }
 
-.card__picture.note, main.menu.note::before {
+.card__picture.note, .menu.note::before {
 	background-image: url('../images/restaurants/miniatures/la-note-enchantee.jpg');
 }
 
-.card__picture.francaise, main.menu.francaise::before {
+.card__picture.francaise, .menu.francaise::before {
 	background-image: url('../images/restaurants/miniatures/a-la-francaise.jpg');
 }
 
-.card__picture.delice, main.menu.delice::before {
+.card__picture.delice, .menu.delice::before {
 	background-image: url('../images/restaurants/miniatures/le-delice-des-sens.jpg');
 }

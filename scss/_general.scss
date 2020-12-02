@@ -1,12 +1,3 @@
-/* STYLE GENERAL
-================================================== */
-
-/* FONTS & COLORS */
-
-@import '_fonts_colors.scss';
-
-/* GENERALITES */
-
 /* Reset */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,menu,time,mark,audio,video {
@@ -54,12 +45,13 @@ h1 {
     font-family: 'Shrikhand', cursive;
 }
 
-h2, h3, p, a {
+h2, h3, h4, p, a {
     font-family: 'Roboto', sans-serif;
 }
-p {
+h4, p {
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
 }
 
 li {
@@ -73,27 +65,3 @@ a {
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
-
-/* BOUTONS */
-
-@import '_buttons.scss';
-
-/* HOME */
-
-@import '_main_home.scss';
-
-/* MENUS */
-
-@import '_main_menu.scss';
-
-/* LOAGING SPINNER */ 
-
-@import '_loading.scss';
-
-/* FOOTER */
-
-@import '_footer.scss';
-
-/* KEY-FRAMES */
-
-@import '_animation.scss';
