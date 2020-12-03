@@ -2,7 +2,6 @@
 ================================================== */
 
 /* GENERAL */
-
 $max-width: 1000px;
 
 body {
@@ -11,7 +10,6 @@ body {
 }
 
 /* HEADER */
-
 header {
 	position: fixed;
 	top: 0;
@@ -35,7 +33,6 @@ header {
 }
 
 /* MAIN */
-
 main.accueil, section {
 	box-sizing: border-box;
 	display: flex;
@@ -89,7 +86,6 @@ section.restaurant {
 }
 
 /* MAIN MENU */
-
 main.menu {
 	position: relative;
 	&::before {

@@ -112,6 +112,7 @@
                 font-size: 1.8em;
                 background: -webkit-linear-gradient(rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
             &:nth-child(1) {

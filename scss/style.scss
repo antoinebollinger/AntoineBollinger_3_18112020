@@ -1,34 +1,26 @@
 /* STYLE GENERAL
 ================================================== */
 
-/* FONTS & COLORS */
-
-@import '_colors.scss';
+/* VARIABLES */
+@import './utils/variables';
 
 /* GENERALITES */
-
-@import '_general.scss';
-
-/* BOUTONS */
-
-@import '_buttons.scss';
-
-/* HOME */
-
-@import '_main_home.scss';
-
-/* MENUS */
-
-@import '_main_menu.scss';
-
-/* LOAGING SPINNER */ 
-
-@import '_loading.scss';
-
-/* FOOTER */
-
-@import '_footer.scss';
+@import './base/general';
 
 /* KEY-FRAMES */
+@import './base/animation';
 
-@import '_animation.scss';
+/* BOUTONS */
+@import './components/buttons';
+
+/* FOOTER */
+@import './layouts/footer';
+
+/* LOAGING SPINNER */ 
+@import './layouts/loading';
+
+/* HOME */
+@import './pages/main_home';
+
+/* MENUS */
+@import './pages/main_menu';
